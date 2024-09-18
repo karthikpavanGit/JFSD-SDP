@@ -1,6 +1,6 @@
 import React from 'react';
 import './Products.css';  // Import the CSS for styling
-import './Saree.webp'as {Saree}
+
 const Products = () => {
   const products = [
     { id: 1, name: "Handloom Saree", price: "$49.99", image: "Saree" },
