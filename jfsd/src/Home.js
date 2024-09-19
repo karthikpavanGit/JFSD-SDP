@@ -5,19 +5,19 @@ const products = [
   {
     id: 1,
     name: 'Handloom Scarf',
-    price: '$30',
+    price: '₹30',
     image: '/path-to-your-image1.jpg', // Replace with your image paths
   },
   {
     id: 2,
     name: 'Handloom Shirt',
-    price: '$50',
+    price: '₹50',
     image: '/path-to-your-image2.jpg',
   },
   {
     id: 3,
     name: 'Handloom Bag',
-    price: '$25',
+    price: '₹25',
     image: '/path-to-your-image3.jpg',
   },
 ];
@@ -36,7 +36,7 @@ const Home = () => {
 
       <div className="welcome-box">
         <h2>Welcome to Handloom Fashion World</h2>
-        <p>Explore the finest handloom products crafted by artisans from around the world.</p>
+        <p>Explore the finest products crafted by artisans from around the world.</p>
         <a href="/about" className="about-button">About Us</a>
       </div>
 
