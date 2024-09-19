@@ -7,13 +7,13 @@ const Welcome = () => {
     <div className="welcome-container">
       {/* Top heading with black background and white text */}
       <header className="store-header">
-        <h1>Handloom Fashion Store</h1>
+        <h1>AP Fashion Store</h1>
       </header>
 
       {/* Box containing the navigation and other content */}
       <div className="welcome-box">
-        <h2>Welcome to Handloom World</h2>
-        <p>Explore the beauty of handloom fashion!</p>
+        <h2>Welcome to AP Fashion World</h2>
+        <p>Explore the beauty of AP fashion!</p>
 
         {/* Navigation Links inside the box */}
         <nav>

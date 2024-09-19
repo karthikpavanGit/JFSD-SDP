@@ -1,0 +1,24 @@
+.about-container {
+    height: 100vh; /* Full viewport height */
+    background-image: url('https://img.freepik.com/free-photo/abstract-blur-defocused-shopping-mall_1203-9548.jpg?w=996&t=st=1726666472~exp=1726667072~hmac=dd028f35dccecfeba034779c211d48a7a323da7276cadccb7acebdd147d0d8aa'); /* Replace with the path to your image */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .about-container h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  
+  .about-container p {
+    font-size: 1.5rem;
+    max-width: 800px;
+    line-height: 1.5;
+  }
