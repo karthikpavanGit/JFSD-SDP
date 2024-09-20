@@ -1,70 +1,63 @@
-/* Overall container for welcome page */
+/* Welcome page container */
 .welcome-container {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* Top header for Handloom Fashion Store */
-  .store-header {
-    background-color: black;
-    color: rgb(26, 165, 172);
-    text-align: center;
-    padding: 20px 0;
-  }
-  
-  .store-header h1 {
-    font-size: 3rem;
-    margin: 0;
-    text-transform: uppercase;
-  }
-  
-  /* Box for welcome text and navigation */
-  .welcome-box {
-    max-width: 800px;
-    margin: 50px auto;
-    padding: 30px;
-    background-color: white;
-    border-radius: 10px;
-    text-align: center;
-  }
-  
-  .welcome-box h2 {
-    font-size: 2rem;
-    color: #4cafaf;
-    margin-bottom: 20px;
-  }
-  
-  .welcome-box p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-    color: black;
-  }
-  
-  /* Navigation styling inside the box */
-  .welcome-box nav ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .welcome-box nav ul li {
-    display: inline-block;
-    margin: 0 15px;
-  }
-  
-  .welcome-box nav ul li a {
-    text-decoration: none;
-    font-size: 1.1rem;
-    color: #4cafaf;
-    font-weight: bold;
-    padding: 10px 15px;
-    border: 2px solid transparent;
-    transition: all 0.3s ease;
-  }
-  
-  .welcome-box nav ul li a:hover {
-    background-color: #4cafaf;
-    color: white;
-    border-radius: 5px;
-    border: 2px solid #4cafaf;
-  }
+  text-align: center;
+  padding: 20px;
+  color: black; /* Black text for better contrast on white background */
+  min-height: 100vh;
+  background-color: white; /* Full screen height */
+}
+
+/* Navbar styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f5f5f5; /* Light background for the navbar */
+  padding: 15px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow */
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Search bar styling */
+.search-container {
+  flex-grow: 1;
+  margin: 0 20px;
+}
+
+.search-bar {
+  width: 50%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* Navigation links styling */
+.nav-links {
+  display: flex;
+  gap: 70px;
+}
+
+.nav-link {
+  color: #45a09a;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #398e86;
+}
+
+/* Welcome text styling */
+.welcome-container h1 {
+  font-size: 2.5rem;
+  margin-top: 20px;
+}
+
+.welcome-container p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}

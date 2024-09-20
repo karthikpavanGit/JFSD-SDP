@@ -1,29 +1,20 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import './Welcome.css';  // Make sure to include the CSS file for styling
+import './Welcome.css';
 
 const Welcome = () => {
   return (
     <div className="welcome-container">
-      {/* Top heading with black background and white text */}
-      <header className="store-header">
-        <h1>AP Fashion Store</h1>
-      </header>
-
-      {/* Box containing the navigation and other content */}
-      <div className="welcome-box">
-        <h2>Welcome to AP Fashion World</h2>
-        <p>Explore the beauty of AP fashion!</p>
-
-        {/* Navigation Links inside the box */}
-        <nav>
-          <ul>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/products">Products</Link></li>
-            <li><Link to="/logout">Logout</Link></li>
-          </ul>
-        </nav>
-      </div>
+      <nav className="navbar">
+        <div className="logo">Handloom Fashion</div>
+        <div className="search-container">
+          <input type="text" placeholder="Search..." className="search-bar" />
+        </div>
+        <div className="nav-links">
+          <a href="/account" className="nav-link">ACCOUNT</a>
+          <a href="/wishlist" className="nav-link">WISHLIST</a>
+          <a href="/cart" className="nav-link">CART</a>
+        </div>
+      </nav>
     </div>
   );
 };

@@ -3,7 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';  // U
 import Home from './Home';
 import Login from './login';
 import SignUp from './SignUp';
-import About from './About';  // Import the About component
+import About from './About';
+import Welcome from './Welcome';  // Import the About component
 
 const App = () => {
   return (
@@ -12,7 +13,8 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
-        <Route path="/about" element={<About />} />  {/* Route for About page */}
+        <Route path="/about" element={<About />} /> 
+        <Route path="/Welcome" element={<Welcome />} />{/* Route for About page */}
       </Routes>
     </Router>
   );

@@ -1,78 +1,60 @@
-/* Global Styles */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f5f5f5;
-    background: url('https://img.freepik.com/free-photo/abstract-blur-defocused-shopping-mall_1203-9548.jpg?w=996&t=st=1726666472~exp=1726667072~hmac=dd028f35dccecfeba034779c211d48a7a323da7276cadccb7acebdd147d0d8aa') no-repeat center center fixed;
+/* Full page container with background image */
+.login-container {
+  background-image: url('https://img.freepik.com/free-photo/abstract-blur-defocused-shopping-mall_1203-9548.jpg?w=996&t=st=1726666472~exp=1726667072~hmac=dd028f35dccecfeba034779c211d48a7a323da7276cadccb7acebdd147d0d8aa'); /* Replace with your image path */
   background-size: cover;
-  }
-  
-  /* Login Form Container */
-  .login-form {
-    max-width: 400px;
-    margin: 100px auto;
-    padding: 30px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-  }
-  .login-form h1 {
-    font-size: 2rem;
-    color: #45a09a;
-    margin-bottom: 20px;
-  }
-  .login-form h2 {
-    font-size: 2rem;
-    color: #333;
-    margin-bottom: 20px;
-  }
-  
-  /* Input Field Styles */
-  .login-form input {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-  }
-  
-  .login-form input:focus {
-    border-color: #4caf9b;
-    outline: none;
-  }
-  
-  /* Button Styles */
-  .login-form button {
-    width: 100%;
-    padding: 12px;
-    background-color: #4caf9b;
-    color: white;
-    font-size: 1rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .login-form button:hover {
-    background-color: #45a09a;
-  }
-  
-  /* Error Message Styles */
-  .login-form p {
-    color: red;
-    font-size: 0.9rem;
-    margin-bottom: 15px;
-  }
-  
-  /* Additional Styling for Better Layout */
-  .login-form label {
-    display: block;
-    text-align: left;
-    font-size: 1rem;
-    margin-bottom: 5px;
-    color: #333;
-  }
+  background-position: center;
+  height: 100vh; /* Full page height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Login form styling */
+.login-form {
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Box shadow for depth */
+  text-align: center;
+  width: 300px;
+}
+
+.store-heading {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.login-form h2 {
+  margin-bottom: 20px;
+}
+
+.login-form div {
+  margin-bottom: 15px;
+}
+
+.login-form label {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  background-color: #45a09a;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #398e86;
+}
