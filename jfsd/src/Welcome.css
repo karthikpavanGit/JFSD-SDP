@@ -1,4 +1,4 @@
-/* Welcome page container */
+/* Navbar styling */
 .welcome-container {
   text-align: center;
   padding: 20px;
@@ -7,57 +7,69 @@
   background-color: white; /* Full screen height */
 }
 
-/* Navbar styling */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #f5f5f5; /* Light background for the navbar */
+  background-color: #f5f5f5;
   padding: 15px 20px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+.navbar img {
+  width: 58px;
+  height: 58px;
+}
+
+/* Logo styling */
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
+  width: 17%;
+  height: 15%;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 /* Search bar styling */
 .search-container {
   flex-grow: 1;
   margin: 0 20px;
+  padding-right: 13%;
 }
 
 .search-bar {
-  width: 50%;
-  padding: 10px;
+  width: 70%;
+  padding: 13px;
   border-radius: 5px;
   border: 1px solid #ccc;
+  
 }
 
-/* Navigation links styling */
-.nav-links {
+/* Icon button container */
+.nav-buttons {
   display: flex;
-  gap: 70px;
+  gap: 20px;
 }
 
-.nav-link {
-  color: #45a09a;
-  text-decoration: none;
-  transition: color 0.3s ease;
+/* Styling for icon buttons */
+.icon-button {
+  background-color: #45a09a;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between icon and text */
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
 }
 
-.nav-link:hover {
-  color: #398e86;
+.icon-button:hover {
+  background-color: #398e86;
 }
 
-/* Welcome text styling */
-.welcome-container h1 {
-  font-size: 2.5rem;
-  margin-top: 20px;
-}
-
-.welcome-container p {
+.icon-button .fa-icon {
   font-size: 1.2rem;
-  margin-top: 10px;
 }
