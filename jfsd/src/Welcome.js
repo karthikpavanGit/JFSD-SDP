@@ -3,6 +3,8 @@ import './Welcome.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faHeart, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import myImage from './Nakshatra.jpg';
+import sareeImage from './Saree-nav.jpeg';
+import kurtaImage from './Saree-nav.jpeg';
 
 const Welcome = () => {
   return (
@@ -32,9 +34,6 @@ const Welcome = () => {
 
       <div className="dropdown-navbar">
         <ul className="nav-menu">
-          <li className="nav-item">
-            <a href="/kanjivaram">KANJIVARAM STORE</a>
-          </li>
           <li className="nav-item">
             <a href="/cottons">COTTONS</a>
           </li>
@@ -133,7 +132,60 @@ const Welcome = () => {
           </li>
         </ul>
       </div>
+      <div className="circle-container">
+      <div className="circle-item">
+        <div className="circle">
+          <img src={sareeImage} alt="Saree" />
+        </div>
+        <p className="circle-text">Sarees</p>
+      </div>
+      <div className="circle-item">
+        <div className="circle">
+          <img src={kurtaImage} alt="Kurta" />
+        </div>
+        <p className="circle-text">Kurtas</p>
+      </div>
+      {/* Add more circles as needed */}
+      {/* Example for other products */}
+      <div className="circle-item">
+        <div className="circle">
+        <img src={sareeImage} alt="Saree" />
+        </div>
+        <p className="circle-text">Item 3</p>
+      </div>
+      <div className="circle-item">
+        <div className="circle">
+        <img src={sareeImage} alt="Saree" />
+        </div>
+        <p className="circle-text">Item 4</p>
+      </div>
+      <div className="circle-item">
+        <div className="circle">
+        <img src={sareeImage} alt="Saree" />
+        </div>
+        <p className="circle-text">Item 5</p>
+      </div>
+      <div className="circle-item">
+        <div className="circle">
+        <img src={sareeImage} alt="Saree" />
+        </div>
+        <p className="circle-text">Item 6</p>
+      </div>
+      <div className="circle-item">
+        <div className="circle">
+        <img src={sareeImage} alt="Saree" />
+        </div>
+        <p className="circle-text">Item 7</p>
+      </div>
+      <div className="circle-item">
+        <div className="circle">
+        <img src={sareeImage} alt="Saree" />
+        </div>
+        <p className="circle-text">Item 8</p>
+      </div>
     </div>
+    </div>
+    
   );
 };
 
