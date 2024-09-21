@@ -223,6 +223,7 @@ const Welcome = () => {
           </div>
         ))}
       </div>
+      <p>Handcrafted Kurtas!</p>
     </div>
     
   );
