@@ -175,3 +175,48 @@ background-size: cover;
   font-weight: 500;
   color: #333;
 }
+p{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+  font-size: 2rem;
+  padding-top: 1%;
+}
+.products-container {
+  display: flex;
+  justify-content: space-around; /* Spread the cards evenly */
+  flex-wrap: wrap; /* Allows wrapping of cards if needed */
+  padding: 20px;
+  gap: 20px;
+}
+
+/* Individual product card */
+.product-card {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  width: 200px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Image container inside the card */
+.product-card .product-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Hover effect to enlarge card */
+.product-card:hover {
+  transform: scale(1.1); /* Make the card bigger */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Add a shadow */
+}
+
+/* Product name below the image */
+.product-card h3 {
+  font-size: 1.2rem;
+  margin-top: 15px;
+  color: #333;
+}

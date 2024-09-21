@@ -5,6 +5,22 @@ import { faUser, faHeart, faShoppingCart } from '@fortawesome/free-solid-svg-ico
 import myImage from './Nakshatra.jpg';
 import sareeImage from './Saree-nav.jpeg';
 import kurtaImage from './Saree-nav.jpeg';
+const products = [
+  { name: "Product 1", image: "https://via.placeholder.com/150?text=Handloom+1" },
+  { name: "Product 2", image: "https://via.placeholder.com/150?text=Handloom+2" },
+  { name: "Product 3", image: "https://via.placeholder.com/150?text=Handloom+3" },
+  { name: "Product 4", image: "https://via.placeholder.com/150?text=Handloom+4" },
+  { name: "Product 5", image: "https://via.placeholder.com/150?text=Handloom+5" }
+  
+];
+const pricerange = [
+  { name: "pricerange 1", image: "https://via.placeholder.com/150?text=Handloom+1" },
+  { name: "pricerange 2", image: "https://via.placeholder.com/150?text=Handloom+2" },
+  { name: "pricerange 3", image: "https://via.placeholder.com/150?text=Handloom+3" },
+  { name: "pricerange 4", image: "https://via.placeholder.com/150?text=Handloom+4" },
+  { name: "pricerange 5", image: "https://via.placeholder.com/150?text=Handloom+5" }
+  
+];
 
 const Welcome = () => {
   return (
@@ -183,7 +199,30 @@ const Welcome = () => {
         </div>
         <p className="circle-text">Item 8</p>
       </div>
+      
     </div>
+    <p>New Arrivals!</p>
+    <div className="products-container">
+        {products.map((product, index) => (
+          <div className="product-card" key={index}>
+            <div className="product-image">
+              <img src={product.image} alt={product.name} />
+            </div>
+            <h3>{product.name}</h3>
+          </div>
+        ))}
+      </div>
+      <p>Sarees By Prices!</p>
+      <div className="products-container">
+        {pricerange.map((product, index) => (
+          <div className="product-card" key={index}>
+            <div className="product-image">
+              <img src={pricerange.image} alt={pricerange.name} />
+            </div>
+            <h3>{pricerange.name}</h3>
+          </div>
+        ))}
+      </div>
     </div>
     
   );
