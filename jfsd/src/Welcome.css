@@ -199,12 +199,13 @@ p{
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 35vh;
 }
 
 /* Image container inside the card */
 .product-card .product-image img {
-  width: 100%;
-  height: auto;
+  width: 80%;
+  height: 25vh;
   border-radius: 10px;
 }
 
@@ -219,4 +220,7 @@ p{
   font-size: 1.2rem;
   margin-top: 15px;
   color: #333;
+}
+.product-card:hover {
+  transform: scale(1.1); /* Zoom effect on hover */
 }

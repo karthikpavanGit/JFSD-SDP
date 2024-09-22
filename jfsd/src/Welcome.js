@@ -5,21 +5,43 @@ import { faUser, faHeart, faShoppingCart } from '@fortawesome/free-solid-svg-ico
 import myImage from './Nakshatra.jpg';
 import sareeImage from './Saree-nav.jpeg';
 import kurtaImage from './Saree-nav.jpeg';
+
 const products = [
-  { name: "Product 1", image: "https://via.placeholder.com/150?text=Handloom+1" },
-  { name: "Product 2", image: "https://via.placeholder.com/150?text=Handloom+2" },
-  { name: "Product 3", image: "https://via.placeholder.com/150?text=Handloom+3" },
-  { name: "Product 4", image: "https://via.placeholder.com/150?text=Handloom+4" },
-  { name: "Product 5", image: "https://via.placeholder.com/150?text=Handloom+5" }
-  
+  { name: "Product 1", image: require('./images/Saree.webp') },
+  { name: "Product 2", image: require('./images/Saree.webp') },
+  { name: "Product 3", image: require('./images/Saree.webp') },
+  { name: "Product 4", image: require('./images/Saree.webp') },
+  { name: "Product 5", image: require('./images/Saree.webp') }
 ];
+
 const pricerange = [
-  { name: "pricerange 1", image: "https://via.placeholder.com/150?text=Handloom+1" },
-  { name: "pricerange 2", image: "https://via.placeholder.com/150?text=Handloom+2" },
-  { name: "pricerange 3", image: "https://via.placeholder.com/150?text=Handloom+3" },
-  { name: "pricerange 4", image: "https://via.placeholder.com/150?text=Handloom+4" },
-  { name: "pricerange 5", image: "https://via.placeholder.com/150?text=Handloom+5" }
-  
+  { name: "Price Range 1", image: require('./images/price1.webp') },
+  { name: "Price Range 2", image: require('./images/price1.webp') },
+  { name: "Price Range 3", image: require('./images/price1.webp') },
+  { name: "Price Range 4", image: require('./images/price1.webp') },
+  { name: "Price Range 5", image: require('./images/price1.webp') }
+];
+
+const handcrafted = [
+  { name: "Kurta 1", image: require('./images/kurta1.jpg') },
+  { name: "Kurta 2", image: require('./images/kurta1.jpg') },
+  { name: "Kurta 3", image: require('./images/kurta1.jpg') },
+  { name: "Kurta 4", image: require('./images/kurta1.jpg') },
+  { name: "Kurta 5", image: require('./images/kurta1.jpg') }
+];
+const BestSelling = [
+  { name: "Best Selling", image: require('./images/BestSelling.webp') },
+  { name: "Best Selling", image: require('./images/BestSelling.webp') },
+  { name: "Best Selling", image: require('./images/BestSelling.webp') },
+  { name: "Best Selling", image: require('./images/BestSelling.webp') },
+  { name: "Best Selling", image: require('./images/BestSelling.webp') }
+];
+const PattuMaterial = [
+  { name: "Best Selling", image: require('./images/PattuMaterial.webp') },
+  { name: "Best Selling", image: require('./images/PattuMaterial.webp') },
+  { name: "Best Selling", image: require('./images/PattuMaterial.webp') },
+  { name: "Best Selling", image: require('./images/PattuMaterial.webp') },
+  { name: "Best Selling", image: require('./images/PattuMaterial.webp') }
 ];
 
 const Welcome = () => {
@@ -201,8 +223,8 @@ const Welcome = () => {
       </div>
       
     </div>
-    <p>New Arrivals!</p>
-    <div className="products-container">
+    <h2>New Arrivals</h2>
+      <div className="products-container">
         {products.map((product, index) => (
           <div className="product-card" key={index}>
             <div className="product-image">
@@ -212,18 +234,54 @@ const Welcome = () => {
           </div>
         ))}
       </div>
-      <p>Sarees By Prices!</p>
+
+      {/* Price Range Section */}
+      <h2>Price Range</h2>
       <div className="products-container">
-        {pricerange.map((product, index) => (
+        {pricerange.map((item, index) => (
           <div className="product-card" key={index}>
             <div className="product-image">
-              <img src={pricerange.image} alt={pricerange.name} />
+              <img src={item.image} alt={item.name} />
             </div>
-            <h3>{pricerange.name}</h3>
+            <h3>{item.name}</h3>
           </div>
         ))}
       </div>
-      <p>Handcrafted Kurtas!</p>
+
+      {/* Handcrafted Section */}
+      <h2>Handcrafted Kurtas!</h2>
+      <div className="products-container">
+        {handcrafted.map((item, index) => (
+          <div className="product-card" key={index}>
+            <div className="product-image">
+              <img src={item.image} alt={item.name} />
+            </div>
+            <h3>{item.name}</h3>
+          </div>
+        ))}
+      </div>
+      <h2>Best Selling Collections!</h2>
+      <div className="products-container">
+        {BestSelling.map((item, index) => (
+          <div className="product-card" key={index}>
+            <div className="product-image">
+              <img src={item.image} alt={item.name} />
+            </div>
+            <h3>{item.name}</h3>
+          </div>
+        ))}
+      </div>
+      <h2>Pattu Materials!</h2>
+      <div className="products-container">
+        {PattuMaterial.map((item, index) => (
+          <div className="product-card" key={index}>
+            <div className="product-image">
+              <img src={item.image} alt={item.name} />
+            </div>
+            <h3>{item.name}</h3>
+          </div>
+        ))}
+      </div>
     </div>
     
   );
