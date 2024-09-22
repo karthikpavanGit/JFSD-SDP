@@ -20,6 +20,60 @@ const products = [
     price: '₹25',
     image: '/path-to-your-image3.jpg',
   },
+  {
+    id: 1,
+    name: 'Handloom Scarf',
+    price: '₹30',
+    image: '/path-to-your-image1.jpg', // Replace with your image paths
+  },
+  {
+    id: 2,
+    name: 'Handloom Shirt',
+    price: '₹50',
+    image: '/path-to-your-image2.jpg',
+  },
+  {
+    id: 3,
+    name: 'Handloom Bag',
+    price: '₹25',
+    image: '/path-to-your-image3.jpg',
+  },
+  {
+    id: 1,
+    name: 'Handloom Scarf',
+    price: '₹30',
+    image: '/path-to-your-image1.jpg', // Replace with your image paths
+  },
+  {
+    id: 2,
+    name: 'Handloom Shirt',
+    price: '₹50',
+    image: '/path-to-your-image2.jpg',
+  },
+  {
+    id: 3,
+    name: 'Handloom Bag',
+    price: '₹25',
+    image: '/path-to-your-image3.jpg',
+  },
+  {
+    id: 3,
+    name: 'Handloom Bag',
+    price: '₹25',
+    image: '/path-to-your-image3.jpg',
+  },
+  {
+    id: 3,
+    name: 'Handloom Bag',
+    price: '₹25',
+    image: '/path-to-your-image3.jpg',
+  },
+  {
+    id: 3,
+    name: 'Handloom Bag',
+    price: '₹25',
+    image: '/path-to-your-image3.jpg',
+  },
 ];
 
 const Home = () => {
@@ -52,8 +106,11 @@ const Home = () => {
             </div>
           ))}
         </div>
+        <p>Fashion</p>
       </div>
+      
     </div>
+    
   );
 };
 

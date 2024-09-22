@@ -6,6 +6,7 @@ body {
   background-color: #f5f5f5;
   background: url('https://img.freepik.com/free-photo/abstract-blur-defocused-shopping-mall_1203-9548.jpg?w=996&t=st=1726666472~exp=1726667072~hmac=dd028f35dccecfeba034779c211d48a7a323da7276cadccb7acebdd147d0d8aa') no-repeat center center fixed;
 background-size: cover;
+
 }
 .home-container {
   font-family: Arial, sans-serif;
@@ -125,19 +126,24 @@ background-size: cover;
   text-align: center;
   padding: 50px 20px;
   margin-top: 50px; /* Space between welcome box and products */
+  height: 10vh;
+  margin-bottom: 10%;
+   
 }
 
 .products-section h2 {
   font-size: 2.2rem;
   margin-bottom: 30px;
+  
 }
 
 /* Product Cards Grid */
 .products-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
-  gap: 20px;
-  padding: 0 20px;
+  gap: 1%;
+  padding: 0 5%;
+  
 }
 
 /* Individual Product Card */
@@ -147,6 +153,7 @@ background-size: cover;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
+
 }
 
 .product-card:hover {
