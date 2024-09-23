@@ -43,7 +43,14 @@ const PattuMaterial = [
   { name: "Best Selling", image: require('./images/PattuMaterial.webp') },
   { name: "Best Selling", image: require('./images/PattuMaterial.webp') }
 ];
-
+const ethnicWear = [
+  { name: "Embroidered Lehengas", image: require('./images/lehenga.webp') },
+  { name: "Bhujodi Dupattas", image: require('./images/lehenga.webp') },
+  { name: "Crepe Silk Kaftans", image: require('./images/lehenga.webp') },
+  { name: "Embroidered Lehengas", image: require('./images/lehenga.webp') },
+  { name: "Bhujodi Dupattas", image: require('./images/lehenga.webp') },
+  { name: "Crepe Silk Kaftans", image: require('./images/lehenga.webp') }
+];
 const Welcome = () => {
   return (
     <div className="welcome-container">
@@ -282,6 +289,20 @@ const Welcome = () => {
           </div>
         ))}
       </div>
+      <div className="ethnic-wear-section">
+      <h2>Popular Ethnic Wears!</h2>
+      <div className="ethnic-wear-container">
+        {ethnicWear.map((item, index) => (
+          <div className="ethnic-wear-card" key={index}>
+            <div className="ethnic-wear-image">
+              <img src={item.image} alt={item.name} />
+            </div>
+            <h3>{item.name}!</h3>
+            <button onClick={() => window.location.href = item.link}>Shop Collection</button>
+          </div>
+        ))}
+      </div>
+    </div>
     </div>
     
   );
