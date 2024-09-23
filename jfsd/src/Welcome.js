@@ -303,6 +303,7 @@ const Welcome = () => {
         ))}
       </div>
     </div>
+    <p>Customer Reviews</p>
     <div className="reviews-carousel">
   <div className="review">
     <img src={myImage} alt="User 1" />
@@ -370,7 +371,10 @@ const Welcome = () => {
     </div>
   </div>
 </div>
+<h2>MISSION & PURPOSE</h2>
+<p>Nakshatra was founded with a mission to showcase the magnificent beauty of traditional Indian Handloom sarees, clothing and handcrafted jewellery to a global audience of Indian women & Indophiles.</p>
 
+<p>We see ourselves as a leading market maker for Indian handloom weavers and artisans. We connect India's finest craftspeople to handloom connoisseurs across India and worldwide.</p>
     </div>
     
   );
