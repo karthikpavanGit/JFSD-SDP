@@ -272,5 +272,93 @@ p{
   cursor: pointer;
   border: 2px solid black;
 }
+.reviews-carousel {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  margin-top: 30px;
+}
 
+.review {
+  text-align: center;
+  width: 250px;
+}
 
+.review img {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+}
+
+.review h4 {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.review p {
+  margin-top: 10px;
+}
+.instagram-feed {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.instagram-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.insta-post {
+  position: relative;
+  border: 1px solid #ddd;
+}
+
+.insta-post img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.insta-post p {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+}
+.latest-blogs {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.blogs-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.blog-preview {
+  width: 50%;
+  text-align: left;
+}
+
+.blog-preview img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.recent-posts ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.recent-posts li {
+  margin-bottom: 10px;
+  text-align: left;
+  font-size: 16px;
+}

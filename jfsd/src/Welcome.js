@@ -303,6 +303,74 @@ const Welcome = () => {
         ))}
       </div>
     </div>
+    <div className="reviews-carousel">
+  <div className="review">
+    <img src={myImage} alt="User 1" />
+    <h4>Karthik Banerjee</h4>
+    <p>⭐⭐⭐⭐⭐</p>
+    <p>Purchased a Bengal Cotton saree online here. Really liked your collection and prices are reasonable.</p>
+  </div>
+  <div className="review">
+    <img src={myImage} alt="User 2" />
+    <h4>Akash Anupya Layde</h4>
+    <p>⭐⭐⭐⭐</p>
+    <p>Great service! Happy with the quality of the product and customer service.</p>
+  </div>
+  <div className="review">
+    <img src={myImage} alt="User 3" />
+    <h4>Sneha Gadamangi</h4>
+    <p>⭐⭐⭐⭐⭐</p>
+    <p>Excellent quality and timely delivery. Will definitely purchase again!</p>
+  </div>
+</div>
+<div className="instagram-feed">
+  <h2>Check out our Instagram Feed</h2>
+  <div className="instagram-grid">
+    <div className="insta-post">
+      <img src={sareeImage} alt="Banarasi 1" />
+      <p>Banarasi</p>
+    </div>
+    <div className="insta-post">
+      <img src={sareeImage} alt="Fashion 1" />
+      <p>Fashion</p>
+    </div>
+    <div className="insta-post">
+      <img src={sareeImage}alt="Banarasi 2" />
+      <p>Banarasi</p>
+    </div>
+    <div className="insta-post">
+      <img src={sareeImage} alt="Kurta 1" />
+      <p>Ajrakh Printed Kurtas</p>
+    </div>
+    <div className="insta-post">
+      <img src={sareeImage} alt="Blue Silk" />
+      <p>Blue Silk</p>
+    </div>
+    <div className="insta-post promo">
+      <img src={sareeImage} alt="Promo 1" />
+      <p>Festive Offer</p>
+    </div>
+  </div>
+</div>
+<div className="latest-blogs">
+  <h2>Latest Blogs</h2>
+  <div className="blogs-container">
+    <div className="blog-preview">
+      <img src={sareeImage} alt="Blog 1" />
+      <h3>Paithani Silk & Kota Doria Lehenga</h3>
+      <p>Unveil the Latest Trends in Paithani Silk & Kota Doria Lehenga</p>
+    </div>
+    <div className="recent-posts">
+      <ul>
+        <li>Banarasi Kanjivaram Silk Sarees: Across Centuries</li>
+        <li>Exploring Elegance of Vidarbha Karvati Tussar Silk Sarees</li>
+        <li>Discover the artistry of Himroo Sarees with ArchiJay</li>
+        <li>Celebrate Navratri in style with ArchiJay's latest collection</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
     </div>
     
   );
