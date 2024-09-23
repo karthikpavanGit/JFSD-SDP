@@ -5,6 +5,7 @@ import { faUser, faHeart, faShoppingCart } from '@fortawesome/free-solid-svg-ico
 import myImage from './Nakshatra.jpg';
 import sareeImage from './Saree-nav.jpeg';
 import kurtaImage from './Saree-nav.jpeg';
+import supportIcon from './images/customersupport.webp';
 
 
 const products = [
@@ -451,7 +452,31 @@ We see ourselves as a leading market maker for Indian handloom weavers and artis
         Terms of Service apply.
       </p>
     </div>
+    
 </div>
+<div className="support-container">
+      <img src={supportIcon} alt="Customer Support" className="support-icon" />
+      
+      <h1 className="support-heading">
+        Customer Support <span className="emoji">🤝</span>
+      </h1>
+      
+      <p className="support-info">
+        Reach out to us @ <strong>1234567890</strong>
+      </p>
+      
+      <p className="support-hours">
+        Operational Hours | 9:30am - 6:30pm
+      </p>
+      
+      <p className="support-email">
+        Email - <a href="mailto:help@nakshatra.com">help@nakshatra.com</a>
+      </p>
+      
+      <button className="contact-button">
+        Contact us
+      </button>
+    </div>
 </div>
 
     

@@ -376,15 +376,16 @@ p{
 }
 /* Example form styling in ContactForm.css */
 .form-container {
-  width: fit-content;
+  width: 500%;
   max-width: 600px;
   margin: 50px auto; /* Added margin-top to move form down */
   padding: 20px;
-  background: rgba(255, 1, 1, 0.9);
+  background: rgba(255, 255, 253, 0.9);
   backdrop-filter: blur(10px);
   border-radius: 10px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   font-family: 'Arial', sans-serif;
+  border: 1px solid black;
   
 }
 
@@ -422,7 +423,7 @@ p{
 
 .form-container button {
   padding: 10px;
-  background-color: #4CAF50;
+  background-color: #45a09a;
   color: white;
   border: none;
   border-radius: 5px;
@@ -431,7 +432,7 @@ p{
 }
 
 .form-container button:hover {
-  background-color: #45a049;
+  background-color: #45a09a;
 }
 
 .form-container h2 {
@@ -439,4 +440,72 @@ p{
   font-size: 22px;
   margin-bottom: 20px;
   color: #333;
+}
+/* CustomerSupport.css */
+
+.support-container {
+  text-align: center;
+  padding: 20px;
+  max-width: 400px;
+  margin: 50px auto;
+  background-color: #fbe8e8; /* Light pink background */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.support-icon {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 20px;
+}
+
+.support-heading {
+  font-size: 28px;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.support-info {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.support-hours {
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: #666;
+}
+
+.support-email {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.support-email a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.support-email a:hover {
+  text-decoration: underline;
+}
+
+.contact-button {
+  padding: 10px 20px;
+  background-color: #45a09a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+  background-color: #45a09a;
+}
+
+.emoji {
+  font-size: 1.5rem;
 }

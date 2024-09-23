@@ -6,73 +6,73 @@ const products = [
     id: 1,
     name: 'Handloom Scarf',
     price: '₹30',
-    image: '/path-to-your-image1.jpg', // Replace with your image paths
+    image: require('./images/handloomscarf.jpg'), // Replace with your image paths
   },
   {
     id: 2,
     name: 'Handloom Shirt',
     price: '₹50',
-    image: '/path-to-your-image2.jpg',
+    image: require('./images/handloomscarf.jpg'),
   },
   {
     id: 3,
     name: 'Handloom Bag',
     price: '₹25',
-    image: '/path-to-your-image3.jpg',
+    image: require('./images/handloomscarf.jpg'),
   },
   {
     id: 1,
     name: 'Handloom Scarf',
     price: '₹30',
-    image: '/path-to-your-image1.jpg', // Replace with your image paths
+    image: require('./images/handloomscarf.jpg'), // Replace with your image paths
   },
   {
     id: 2,
     name: 'Handloom Shirt',
     price: '₹50',
-    image: '/path-to-your-image2.jpg',
+    image: require('./images/handloomscarf.jpg'),
   },
   {
     id: 3,
     name: 'Handloom Bag',
     price: '₹25',
-    image: '/path-to-your-image3.jpg',
+    image: require('./images/handloomscarf.jpg'),
   },
   {
     id: 1,
     name: 'Handloom Scarf',
     price: '₹30',
-    image: '/path-to-your-image1.jpg', // Replace with your image paths
+    image: require('./images/handloomscarf.jpg'), // Replace with your image paths
   },
   {
     id: 2,
     name: 'Handloom Shirt',
     price: '₹50',
-    image: '/path-to-your-image2.jpg',
+    image: require('./images/handloomscarf.jpg'),
   },
   {
     id: 3,
     name: 'Handloom Bag',
     price: '₹25',
-    image: '/path-to-your-image3.jpg',
+    image: require('./images/handloomscarf.jpg'),
   },
   {
     id: 3,
     name: 'Handloom Bag',
     price: '₹25',
-    image: '/path-to-your-image3.jpg',
+    image: require('./images/handloomscarf.jpg'),
   },
   {
     id: 3,
     name: 'Handloom Bag',
     price: '₹25',
-    image: '/path-to-your-image3.jpg',
+    image: require('./images/handloomscarf.jpg'),
   },
   {
     id: 3,
     name: 'Handloom Bag',
     price: '₹25',
-    image: '/path-to-your-image3.jpg',
+    image: require('./images/handloomscarf.jpg'),
   },
 ];
 
