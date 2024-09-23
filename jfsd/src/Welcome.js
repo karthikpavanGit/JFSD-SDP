@@ -371,11 +371,14 @@ const Welcome = () => {
     </div>
   </div>
 </div>
+<div className='mission'>
 <h2>MISSION & PURPOSE</h2>
 <p>Nakshatra was founded with a mission to showcase the magnificent beauty of traditional Indian Handloom sarees, clothing and handcrafted jewellery to a global audience of Indian women & Indophiles.
 
 We see ourselves as a leading market maker for Indian handloom weavers and artisans. We connect India's finest craftspeople to handloom connoisseurs across India and worldwide.</p>
     </div>
+</div>
+
     
   );
 };
