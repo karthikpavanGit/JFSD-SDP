@@ -371,4 +371,72 @@ p{
  text-align: center;
 
 }
+.mission h2{
+  padding-top: 45px;
+}
+/* Example form styling in ContactForm.css */
+.form-container {
+  width: fit-content;
+  max-width: 600px;
+  margin: 50px auto; /* Added margin-top to move form down */
+  padding: 20px;
+  background: rgba(255, 1, 1, 0.9);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+  
+}
 
+/* Or if you prefer using padding: */
+.form-container {
+  padding-top: 80px; /* Adjust the padding-top to move it down */
+  
+
+}
+   
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container label {
+  margin-bottom: 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container input[type="tel"],
+.form-container textarea {
+  padding: 10px;
+  margin-bottom: 15px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form-container button {
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.form-container button:hover {
+  background-color: #45a049;
+}
+
+.form-container h2 {
+  text-align: center;
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #333;
+}

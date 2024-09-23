@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Welcome.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faHeart, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import myImage from './Nakshatra.jpg';
 import sareeImage from './Saree-nav.jpeg';
 import kurtaImage from './Saree-nav.jpeg';
+
 
 const products = [
   { name: "Product 1", image: require('./images/Saree.webp') },
@@ -52,6 +53,26 @@ const ethnicWear = [
   { name: "Crepe Silk Kaftans", image: require('./images/lehenga.webp') }
 ];
 const Welcome = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log('Form data submitted:', formData);
+    // Add form submission logic here (e.g., sending data to a server)
+    setFormData({ name: '', email: '', message: '' }); // Reset form fields after submission
+  };
   return (
     <div className="welcome-container">
       <nav className="navbar">
@@ -377,6 +398,60 @@ const Welcome = () => {
 
 We see ourselves as a leading market maker for Indian handloom weavers and artisans. We connect India's finest craftspeople to handloom connoisseurs across India and worldwide.</p>
     </div>
+    <div className="form-container">
+    <div style={{ maxWidth: "600px", margin: "auto" }}>
+      <h2>For queries, fill this form! We'll reach out to you shortly.</h2>
+      <form onSubmit={handleSubmit}>
+        <div>
+          <label htmlFor="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div>
+          <label htmlFor="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div>
+          <label htmlFor="phoneNumber">Phone Number</label>
+          <input
+            type="tel"
+            id="phoneNumber"
+            name="phoneNumber"
+            value={formData.phoneNumber}
+            onChange={handleChange}
+          />
+        </div>
+        <div>
+          <label htmlFor="message">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <button type="submit">Send</button>
+      </form>
+      <p>
+        This site is protected by hCaptcha and the hCaptcha Privacy Policy and
+        Terms of Service apply.
+      </p>
+    </div>
+</div>
 </div>
 
     
