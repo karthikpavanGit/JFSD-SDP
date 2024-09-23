@@ -95,7 +95,7 @@ const Home = () => {
       </div>
 
       {/* New Products Section (Added at the bottom) */}
-      <div className="products-section">
+      <div className="products-section" onClick={() => window.location.href = '/login'}>
         <h2>Our Products</h2>
         <div className="products-grid">
           {products.map((product) => (
