@@ -83,8 +83,8 @@ const Home = () => {
       <header className="home-header">
         <h1>Handloom Fashion Store</h1>
         <div className="auth-buttons">
-          <a href="/login" className="auth-button">Sign In</a>
-          <a href="/signup" className="auth-button">Sign Up</a>
+          <a href="/welcome" className="auth-button">Products</a>
+          
         </div>
       </header>
 
