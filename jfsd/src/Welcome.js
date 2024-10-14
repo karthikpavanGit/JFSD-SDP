@@ -470,7 +470,7 @@ We see ourselves as a leading market maker for Indian handloom weavers and artis
       </p>
       
       <p className="support-email">
-        Email - <a href="mailto:help@nakshatra.com">help@nakshatra.com</a>
+        Email - <a href="mailto:nakshatra@kluniversity.in">nakshatra@kluniversity.in</a>
       </p>
       
       <button className="contact-button">
