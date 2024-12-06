@@ -1,0 +1,122 @@
+.login-page {
+    min-height: calc(100vh - 64px); /* Subtract navbar height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f5f5;
+    padding: 40px 0;
+}
+
+.login-paper {
+    padding: 40px;
+    border-radius: 16px !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+.login-form {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.login-button {
+    margin-top: 16px !important;
+    padding: 12px !important;
+    background-color: #1a237e !important;
+    color: white !important;
+    font-weight: 600 !important;
+    transition: all 0.3s ease !important;
+}
+
+.login-button:hover {
+    background-color: #0d1757 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(26, 35, 126, 0.2);
+}
+
+.forgot-password {
+    color: #666 !important;
+    text-align: right;
+    display: block;
+    margin-top: -8px;
+}
+
+.signup-prompt {
+    margin-top: 24px !important;
+    color: #666;
+}
+
+.signup-prompt a {
+    color: #1a237e !important;
+    font-weight: 500;
+}
+
+/* Social Login Buttons (if needed) */
+.social-login {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.social-login-button {
+    width: 100%;
+    padding: 12px !important;
+    border-radius: 8px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 12px;
+    font-weight: 500 !important;
+    border: 1px solid #e0e0e0 !important;
+}
+
+.social-login-button:hover {
+    background-color: #f5f5f5 !important;
+}
+
+.social-login-button img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .login-paper {
+        padding: 24px;
+        margin: 16px;
+    }
+
+    .login-page {
+        padding: 20px 0;
+    }
+}
+
+/* Form Field Customization */
+.MuiTextField-root {
+    background-color: #f8f9fa;
+}
+
+.MuiOutlinedInput-root {
+    border-radius: 8px !important;
+}
+
+.MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline {
+    border-color: #1a237e;
+}
+
+.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-color: #1a237e !important;
+}
+
+/* Error States */
+.error-message {
+    color: #d32f2f;
+    font-size: 0.875rem;
+    margin-top: 8px;
+}
+
+.MuiTextField-root.error {
+    background-color: #fff5f5;
+}

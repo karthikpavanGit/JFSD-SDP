@@ -1,0 +1,50 @@
+.shipping-form {
+    width: 100%;
+}
+
+.form-title {
+    color: #1a237e;
+    margin-bottom: 24px !important;
+    font-weight: 500 !important;
+}
+
+.MuiTextField-root {
+    margin-bottom: 16px !important;
+}
+
+.submit-button {
+    margin-top: 32px !important;
+    background-color: #1a237e !important;
+    padding: 12px 32px !important;
+    font-weight: 500 !important;
+}
+
+.submit-button:hover {
+    background-color: #0d1757 !important;
+}
+
+/* Custom styles for form fields */
+.MuiOutlinedInput-root {
+    border-radius: 8px !important;
+}
+
+.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-color: #1a237e !important;
+}
+
+.MuiFormLabel-root.Mui-focused {
+    color: #1a237e !important;
+}
+
+/* Error states */
+.MuiFormHelperText-root.Mui-error {
+    margin-top: 4px !important;
+    font-size: 12px !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .submit-button {
+        width: 100%;
+    }
+}

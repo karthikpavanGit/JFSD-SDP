@@ -1,0 +1,126 @@
+.order-summary {
+    padding: 24px;
+}
+
+.summary-section {
+    padding: 24px;
+    margin-bottom: 24px;
+    border-radius: 8px !important;
+}
+
+.summary-section h6 {
+    color: #1a237e;
+    margin-bottom: 16px !important;
+    font-weight: 600 !important;
+}
+
+.summary-section p {
+    color: #666;
+    line-height: 1.6;
+}
+
+.price-summary {
+    padding: 24px;
+    position: sticky;
+    top: 24px;
+    border-radius: 8px !important;
+}
+
+.price-summary h6 {
+    color: #1a237e;
+    margin-bottom: 24px !important;
+    font-weight: 600 !important;
+}
+
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.price-row.total {
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+.price-row.total h6 {
+    margin-bottom: 0 !important;
+}
+
+.price-divider {
+    margin: 16px 0 !important;
+}
+
+.place-order-button {
+    background-color: #1a237e !important;
+    color: white !important;
+    padding: 12px !important;
+    font-weight: 600 !important;
+}
+
+.place-order-button:hover {
+    background-color: #0d1757 !important;
+}
+
+/* Order Items List */
+.MuiList-root {
+    padding: 0 !important;
+}
+
+.MuiListItem-root {
+    padding: 16px 0 !important;
+}
+
+.MuiListItemText-primary {
+    font-weight: 500 !important;
+    margin-bottom: 4px !important;
+}
+
+.MuiListItemText-secondary {
+    color: #666 !important;
+}
+
+/* Shipping Details */
+.shipping-details {
+    margin-top: 8px;
+}
+
+.shipping-details p {
+    margin-bottom: 4px !important;
+}
+
+/* Payment Method */
+.payment-method {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.payment-method .MuiSvgIcon-root {
+    color: #1a237e;
+}
+
+/* Responsive Design */
+@media (max-width: 960px) {
+    .price-summary {
+        position: static;
+        margin-top: 24px;
+    }
+}
+
+@media (max-width: 600px) {
+    .order-summary {
+        padding: 16px;
+    }
+
+    .summary-section,
+    .price-summary {
+        padding: 16px;
+    }
+
+    .price-row {
+        margin-bottom: 12px;
+    }
+}

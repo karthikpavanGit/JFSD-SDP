@@ -1,0 +1,81 @@
+.settings {
+    padding: 40px 0;
+    background-color: #f5f5f5;
+    min-height: calc(100vh - 64px);
+}
+
+.settings-section {
+    margin-bottom: 24px;
+    border-radius: 8px !important;
+    overflow: hidden;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px;
+    background-color: #f8f9fa;
+}
+
+.section-header .MuiSvgIcon-root {
+    color: #1a237e;
+}
+
+.section-header h6 {
+    font-weight: 600 !important;
+    margin: 0;
+}
+
+.MuiListItem-root {
+    padding: 16px 20px !important;
+}
+
+.MuiListItemText-secondary {
+    color: #666 !important;
+}
+
+.danger-zone .section-header {
+    background-color: #fff5f5;
+}
+
+.danger-zone .section-header .MuiSvgIcon-root {
+    color: #f44336;
+}
+
+.danger-content {
+    padding: 20px;
+}
+
+.danger-content .MuiTypography-body1 {
+    color: #666;
+    margin-bottom: 16px;
+}
+
+/* Switch customization */
+.MuiSwitch-colorPrimary.Mui-checked {
+    color: #1a237e !important;
+}
+
+.MuiSwitch-colorPrimary.Mui-checked + .MuiSwitch-track {
+    background-color: #1a237e !important;
+}
+
+/* Button customization */
+.MuiButton-outlined {
+    border-color: #1a237e !important;
+    color: #1a237e !important;
+}
+
+.MuiButton-outlined:hover {
+    background-color: rgba(26, 35, 126, 0.04) !important;
+}
+
+.danger-zone .MuiButton-outlined {
+    border-color: #f44336 !important;
+    color: #f44336 !important;
+}
+
+.danger-zone .MuiButton-outlined:hover {
+    background-color: rgba(244, 67, 54, 0.04) !important;
+}

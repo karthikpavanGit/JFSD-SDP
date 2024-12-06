@@ -1,0 +1,154 @@
+.payment-form {
+    width: 100%;
+}
+
+.payment-option {
+    margin-bottom: 16px !important;
+    padding: 16px !important;
+    border-radius: 8px !important;
+    border: 1px solid #e0e0e0;
+    transition: all 0.3s ease;
+}
+
+.payment-option:hover {
+    border-color: #1a237e;
+    background-color: rgba(26, 35, 126, 0.02);
+}
+
+.payment-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.payment-label .MuiSvgIcon-root {
+    color: #1a237e;
+}
+
+/* Radio button customization */
+.MuiRadio-root.Mui-checked {
+    color: #1a237e !important;
+}
+
+/* Card details section */
+.card-details {
+    margin-top: 24px !important;
+    padding: 24px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+}
+
+.card-details .MuiTextField-root {
+    margin-bottom: 16px !important;
+}
+
+/* Card input fields */
+.card-input {
+    background-color: white;
+    border-radius: 8px !important;
+}
+
+.card-input .MuiOutlinedInput-root {
+    border-radius: 8px !important;
+}
+
+/* Submit button */
+.submit-button {
+    margin-top: 32px !important;
+    background-color: #1a237e !important;
+    padding: 12px 32px !important;
+    font-weight: 500 !important;
+}
+
+.submit-button:hover {
+    background-color: #0d1757 !important;
+}
+
+/* Payment method icons */
+.payment-icon {
+    font-size: 24px !important;
+    color: #1a237e;
+}
+
+/* UPI section */
+.upi-section {
+    margin-top: 24px;
+    padding: 24px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+}
+
+/* Net Banking section */
+.netbanking-section {
+    margin-top: 24px;
+    padding: 24px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+}
+
+/* Bank selection dropdown */
+.bank-select {
+    width: 100%;
+    margin-top: 16px !important;
+}
+
+/* Security badge */
+.security-badge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 24px;
+    padding: 12px;
+    background-color: #e8f5e9;
+    border-radius: 8px;
+    color: #2e7d32;
+}
+
+.security-badge .MuiSvgIcon-root {
+    font-size: 20px;
+}
+
+/* Error states */
+.error-text {
+    color: #f44336;
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+/* Loading state */
+.loading-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .payment-option {
+        padding: 12px !important;
+    }
+
+    .card-details {
+        padding: 16px;
+    }
+
+    .submit-button {
+        width: 100%;
+    }
+
+    .payment-label {
+        font-size: 14px;
+    }
+
+    .security-badge {
+        flex-direction: column;
+        text-align: center;
+    }
+}

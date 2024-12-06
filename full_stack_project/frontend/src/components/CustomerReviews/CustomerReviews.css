@@ -1,0 +1,57 @@
+.customer-reviews {
+    padding: 80px 0;
+    background-color: #f8f9fa;
+}
+
+.reviews-slider {
+    margin-top: 40px;
+    padding: 20px 0;
+}
+
+.review-slide {
+    padding: 10px;
+}
+
+.review-card {
+    padding: 24px;
+    height: 100%;
+    border-radius: 12px !important;
+    border: 1px solid #e0e0e0;
+}
+
+.review-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.review-avatar {
+    width: 60px !important;
+    height: 60px !important;
+    margin-right: 16px;
+}
+
+.review-info h6 {
+    margin-bottom: 4px;
+}
+
+.review-text {
+    color: #666;
+    font-style: italic;
+    margin-bottom: 16px !important;
+    line-height: 1.6;
+}
+
+.review-date {
+    color: #999;
+}
+
+/* Custom slider dots */
+.reviews-slider .slick-dots li button:before {
+    font-size: 12px;
+    color: #1a237e;
+}
+
+.reviews-slider .slick-dots li.slick-active button:before {
+    color: #1a237e;
+}

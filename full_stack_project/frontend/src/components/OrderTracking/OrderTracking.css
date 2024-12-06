@@ -1,0 +1,81 @@
+.order-tracking {
+    padding: 40px 0;
+    background-color: #f5f5f5;
+    min-height: calc(100vh - 64px);
+}
+
+.tracking-paper {
+    padding: 32px;
+}
+
+.tracking-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 32px;
+}
+
+.tracking-timeline {
+    margin: 32px 0;
+}
+
+.tracking-timeline .MuiStepLabel-root {
+    padding: 16px 0;
+}
+
+.tracking-timeline .MuiStepIcon-root {
+    color: #1a237e;
+}
+
+.tracking-timeline .MuiStepIcon-root.completed {
+    color: #4caf50;
+}
+
+.tracking-divider {
+    margin: 32px 0 !important;
+}
+
+.order-item {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+}
+
+.item-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-right: 16px;
+}
+
+.item-details {
+    flex-grow: 1;
+}
+
+.tracking-status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.tracking-status .MuiSvgIcon-root {
+    color: #1a237e;
+}
+
+.expected-delivery {
+    margin-top: 16px;
+    padding: 16px;
+    background-color: #e8f5e9;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.expected-delivery .MuiSvgIcon-root {
+    color: #2e7d32;
+}

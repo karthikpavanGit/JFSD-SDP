@@ -1,0 +1,60 @@
+.special-offers {
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+
+.offer-card {
+    height: 400px;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.offer-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.3));
+}
+
+.offer-content {
+    position: relative;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.offer-content h5 {
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+
+.offer-content h3 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: #ff4081;
+}
+
+.offer-content .MuiTypography-subtitle1 {
+    margin-bottom: 24px;
+}
+
+.offer-button {
+    background-color: white !important;
+    color: #1a237e !important;
+    padding: 12px 32px !important;
+    font-weight: 600 !important;
+}
+
+.offer-button:hover {
+    background-color: #f5f5f5 !important;
+}

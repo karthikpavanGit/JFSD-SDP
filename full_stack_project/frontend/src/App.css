@@ -1,38 +1,67 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.app {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
+}
+
+/* Make the main content area grow to push footer to bottom */
+main {
+  flex: 1 0 auto;
+}
+
+/* Smooth scrolling for the whole app */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+* {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* Global link styles */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Global transition for hover effects */
+.MuiButton-root,
+.MuiCard-root,
+.MuiIconButton-root {
+  transition: all 0.3s ease !important;
+}
+
+/* Global loading spinner styles */
+.loading-spinner {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  min-height: 200px;
 }
 
-.App-link {
-  color: #61dafb;
+/* Global error message styles */
+.error-message {
+  color: #f44336;
+  text-align: center;
+  padding: 20px;
+  background-color: #ffebee;
+  border-radius: 8px;
+  margin: 20px 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Global success message styles */
+.success-message {
+  color: #2e7d32;
+  text-align: center;
+  padding: 20px;
+  background-color: #e8f5e9;
+  border-radius: 8px;
+  margin: 20px 0;
 }

@@ -1,0 +1,35 @@
+.register-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-color: #f5f5f5;
+    padding: 40px 0;
+}
+
+.register-paper {
+    padding: 40px;
+    border-radius: 12px !important;
+}
+
+.register-form {
+    margin-top: 24px;
+}
+
+.register-form .MuiGrid-container {
+    margin-bottom: 24px;
+}
+
+.register-button {
+    background-color: #1a237e !important;
+    padding: 12px !important;
+    margin: 24px 0 16px !important;
+}
+
+.login-prompt {
+    color: #666;
+}
+
+.login-prompt a {
+    color: #1a237e;
+    font-weight: 500;
+}
