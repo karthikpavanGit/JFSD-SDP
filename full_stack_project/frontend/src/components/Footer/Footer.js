@@ -25,7 +25,7 @@ const Footer = () => {
                     {/* Company Info */}
                     <Grid item xs={12} md={4}>
                         <Typography variant="h6" className="footer-title">
-                            Handloom Heritage
+                            Nakshatra Threads
                         </Typography>
                         <Typography variant="body2" className="footer-description">
                             Preserving tradition, embracing innovation. Your destination for authentic handloom products.
@@ -62,11 +62,11 @@ const Footer = () => {
                                 <Phone /> <span>+91 123 456 7890</span>
                             </div>
                             <div className="contact-item">
-                                <Email /> <span>info@handloomheritage.com</span>
+                                <Email /> <span>nakshatra@kluniversity.in</span>
                             </div>
                             <div className="contact-item">
                                 <LocationOn /> 
-                                <span>123 Craft Street, Textile Hub,<br />Handloom City - 500001</span>
+                                <span>C Block<br />KL University- 500001</span>
                             </div>
                         </div>
                     </Grid>
@@ -75,7 +75,7 @@ const Footer = () => {
                 {/* Copyright */}
                 <div className="footer-bottom">
                     <Typography variant="body2">
-                        © 2024 Handloom Heritage. All rights reserved.
+                        © 2024 Nakshatra Threads. All rights reserved.
                     </Typography>
                     <div className="footer-bottom-links">
                         <Link href="/privacy">Privacy Policy</Link>

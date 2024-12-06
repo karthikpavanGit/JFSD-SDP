@@ -1,0 +1,110 @@
+.recommendations {
+    padding: 40px 0;
+}
+
+.recommendation-section {
+    margin-bottom: 40px;
+}
+
+.section-title {
+    color: #1a237e;
+    font-weight: 600 !important;
+    margin-bottom: 24px !important;
+}
+
+.product-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 12px !important;
+    overflow: hidden;
+}
+
+.product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+    height: 240px;
+    object-fit: cover;
+}
+
+.discount-chip {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background-color: #c2185b !important;
+    color: white !important;
+    font-weight: 600 !important;
+}
+
+.product-name {
+    font-size: 1rem !important;
+    font-weight: 500 !important;
+    margin-bottom: 8px !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.price-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.product-price {
+    color: #1a237e;
+    font-weight: 600 !important;
+}
+
+.original-price {
+    color: #666;
+    text-decoration: line-through;
+}
+
+.rating-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.rating-container .MuiRating-root {
+    color: #ffc107;
+}
+
+.card-actions {
+    padding: 16px !important;
+    gap: 8px;
+    margin-top: auto;
+}
+
+.card-actions .MuiButton-contained {
+    background-color: #1a237e !important;
+}
+
+.card-actions .MuiButton-outlined {
+    border-color: #1a237e !important;
+    color: #1a237e !important;
+}
+
+/* Responsive Design */
+@media (max-width: 960px) {
+    .product-image {
+        height: 200px;
+    }
+}
+
+@media (max-width: 600px) {
+    .recommendations {
+        padding: 20px 0;
+    }
+
+    .card-actions {
+        flex-direction: column;
+    }
+}

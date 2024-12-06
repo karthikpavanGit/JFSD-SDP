@@ -7,17 +7,20 @@
     display: flex;
     align-items: center;
     flex-grow: 1;
+    gap: 10px;
 }
 
 .logo {
     height: 40px;
     margin-right: 10px;
+
 }
 
 .brand-name {
     color: #1a237e;
     font-weight: 600 !important;
     letter-spacing: 1px;
+    
 }
 
 .nav-icons {

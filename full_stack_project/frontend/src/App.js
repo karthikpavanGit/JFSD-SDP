@@ -73,6 +73,7 @@ function App() {
           <Navbar onCartClick={() => setCartOpen(true)} />
           
           <Routes>
+            
               {/* Home Page Route */}
               <Route path="/" element={
                   <>
