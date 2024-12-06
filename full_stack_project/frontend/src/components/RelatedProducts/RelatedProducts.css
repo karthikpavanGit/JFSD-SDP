@@ -1,0 +1,133 @@
+.related-products {
+    padding: 40px 0;
+}
+
+.section-title {
+    color: #1a237e;
+    font-weight: 600 !important;
+    margin-bottom: 32px !important;
+}
+
+.products-slider {
+    margin: 0 -12px;
+}
+
+.product-slide {
+    padding: 12px;
+}
+
+.product-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.product-image {
+    height: 300px;
+    object-fit: cover;
+}
+
+.product-name {
+    font-size: 1rem !important;
+    margin-bottom: 8px !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.product-price {
+    color: #1a237e;
+    font-weight: 600 !important;
+    margin-bottom: 8px !important;
+}
+
+.product-rating {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.product-rating .MuiRating-root {
+    color: #ffc107;
+}
+
+.product-rating .MuiTypography-root {
+    color: #666;
+}
+
+.product-actions {
+    margin-top: auto;
+    padding: 16px !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.favorite-active {
+    color: #f44336 !important;
+}
+
+/* Slider Customization */
+.slick-prev,
+.slick-next {
+    width: 40px;
+    height: 40px;
+    background-color: #fff !important;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    z-index: 1;
+}
+
+.slick-prev {
+    left: -20px;
+}
+
+.slick-next {
+    right: -20px;
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+    background-color: #fff !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.slick-dots {
+    bottom: -40px;
+}
+
+.slick-dots li button:before {
+    font-size: 8px;
+    color: #1a237e;
+}
+
+.slick-dots li.slick-active button:before {
+    color: #1a237e;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .related-products {
+        padding: 32px 0;
+    }
+
+    .product-image {
+        height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .slick-prev {
+        left: -12px;
+    }
+
+    .slick-next {
+        right: -12px;
+    }
+}

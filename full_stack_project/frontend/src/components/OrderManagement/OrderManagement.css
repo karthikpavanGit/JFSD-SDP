@@ -1,0 +1,177 @@
+.order-management {
+    padding: 40px 0;
+    background-color: #f5f5f5;
+    min-height: calc(100vh - 64px);
+}
+
+.orders-paper {
+    border-radius: 12px !important;
+    overflow: hidden;
+}
+
+.orders-header {
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f9fa;
+}
+
+.orders-header h5 {
+    color: #1a237e;
+    font-weight: 600;
+}
+
+.header-actions {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.header-actions .MuiTextField-root {
+    background-color: white;
+    border-radius: 8px;
+    width: 240px;
+}
+
+.order-tabs {
+    background-color: white;
+    border-bottom: 1px solid #eee;
+}
+
+.order-tabs .MuiTab-root {
+    text-transform: none;
+    font-weight: 500;
+    min-width: 120px;
+}
+
+.order-tabs .Mui-selected {
+    color: #1a237e !important;
+}
+
+.order-tabs .MuiTabs-indicator {
+    background-color: #1a237e;
+}
+
+/* Table Styles */
+.MuiTableHead-root .MuiTableCell-root {
+    font-weight: 600;
+    color: #1a237e;
+    background-color: #f8f9fa;
+}
+
+.MuiTableBody-root .MuiTableRow-root:hover {
+    background-color: #f8f9fa;
+}
+
+.MuiTableCell-root {
+    padding: 16px 24px !important;
+}
+
+/* Dialog Styles */
+.dialog-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+}
+
+.dialog-title h6 {
+    color: #1a237e;
+    font-weight: 600;
+}
+
+.order-details {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.detail-section {
+    padding: 16px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+}
+
+.detail-section .MuiTypography-subtitle1 {
+    color: #1a237e;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.order-item {
+    display: flex;
+    gap: 16px;
+    padding: 16px;
+    background-color: white;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+.order-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.item-info {
+    flex-grow: 1;
+}
+
+/* Chip Styles */
+.MuiChip-root {
+    font-weight: 500;
+}
+
+.MuiChip-colorWarning {
+    background-color: #fff3e0 !important;
+    color: #e65100 !important;
+}
+
+.MuiChip-colorInfo {
+    background-color: #e3f2fd !important;
+    color: #0d47a1 !important;
+}
+
+.MuiChip-colorSuccess {
+    background-color: #e8f5e9 !important;
+    color: #2e7d32 !important;
+}
+
+.MuiChip-colorError {
+    background-color: #ffebee !important;
+    color: #c62828 !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .order-management {
+        padding: 20px;
+    }
+
+    .orders-header {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .header-actions {
+        width: 100%;
+    }
+
+    .header-actions .MuiTextField-root {
+        flex-grow: 1;
+    }
+
+    .order-tabs {
+        overflow-x: auto;
+    }
+
+    .order-tabs .MuiTab-root {
+        min-width: auto;
+    }
+
+    .MuiTableCell-root {
+        padding: 12px 16px !important;
+    }
+}

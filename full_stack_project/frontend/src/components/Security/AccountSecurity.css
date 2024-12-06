@@ -1,0 +1,144 @@
+.account-security {
+    padding: 40px 0;
+    background-color: #f5f5f5;
+    min-height: calc(100vh - 64px);
+}
+
+.security-section {
+    margin-bottom: 24px;
+    border-radius: 8px !important;
+    overflow: hidden;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px;
+    background-color: #f8f9fa;
+}
+
+.section-header .MuiSvgIcon-root {
+    color: #1a237e;
+}
+
+.section-header h6 {
+    font-weight: 600 !important;
+    margin: 0;
+}
+
+.security-grid {
+    padding: 24px !important;
+}
+
+.security-item {
+    display: flex;
+    gap: 16px;
+    padding: 24px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    transition: box-shadow 0.3s ease;
+}
+
+.security-item:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.security-item .MuiSvgIcon-root {
+    color: #1a237e;
+}
+
+.security-item-content {
+    flex-grow: 1;
+}
+
+.security-item-content .MuiTypography-subtitle1 {
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.security-item-content .MuiTypography-body2 {
+    color: #666;
+    margin-bottom: 16px;
+}
+
+.activity-list {
+    padding: 24px;
+}
+
+.activity-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    border-bottom: 1px solid #eee;
+}
+
+.activity-item:last-child {
+    border-bottom: none;
+}
+
+.activity-info .MuiTypography-subtitle1 {
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.activity-info .MuiTypography-body2 {
+    color: #666;
+    margin-bottom: 4px;
+}
+
+.activity-status {
+    padding: 4px 12px;
+    border-radius: 16px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.activity-status.success {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+}
+
+.activity-status.failed {
+    background-color: #ffebee;
+    color: #c62828;
+}
+
+.two-factor-content {
+    padding: 24px 0;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Dialog customization */
+.MuiDialog-paper {
+    border-radius: 12px !important;
+}
+
+.MuiDialogTitle-root {
+    background-color: #f8f9fa;
+    color: #1a237e;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .account-security {
+        padding: 20px;
+    }
+
+    .security-grid {
+        padding: 16px !important;
+    }
+
+    .security-item {
+        padding: 16px;
+    }
+
+    .activity-list {
+        padding: 16px;
+    }
+}

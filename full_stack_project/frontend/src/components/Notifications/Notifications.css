@@ -1,0 +1,70 @@
+.notifications-menu {
+    margin-top: 8px;
+}
+
+.notifications-menu .MuiPaper-root {
+    width: 360px;
+    max-height: 480px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.notifications-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+}
+
+.notifications-header h6 {
+    font-weight: 600;
+    color: #1a237e;
+}
+
+.notifications-header button {
+    color: #1a237e;
+    text-transform: none;
+    font-size: 0.875rem;
+}
+
+.notification-item {
+    padding: 16px !important;
+    display: flex !important;
+    gap: 16px;
+    border-bottom: 1px solid #eee;
+}
+
+.notification-item.read {
+    background-color: #f8f9fa;
+}
+
+.notification-icon {
+    color: #1a237e;
+}
+
+.notification-content {
+    flex-grow: 1;
+}
+
+.notification-content p {
+    margin-bottom: 4px;
+    color: #333;
+    font-size: 0.875rem;
+}
+
+.notification-content span {
+    color: #666;
+    font-size: 0.75rem;
+}
+
+/* Badge customization */
+.MuiBadge-badge {
+    background-color: #f44336 !important;
+}
+
+/* Empty state */
+.notifications-empty {
+    padding: 32px;
+    text-align: center;
+    color: #666;
+}

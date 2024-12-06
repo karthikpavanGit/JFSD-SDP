@@ -1,0 +1,129 @@
+.profile-settings {
+    padding: 40px 0;
+    background-color: #f5f5f5;
+    min-height: calc(100vh - 64px);
+}
+
+.settings-paper {
+    padding: 32px;
+    border-radius: 12px !important;
+}
+
+.settings-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.settings-header h5 {
+    color: #1a237e;
+    font-weight: 600;
+}
+
+.avatar-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.profile-avatar {
+    width: 120px !important;
+    height: 120px !important;
+    margin-bottom: 16px;
+}
+
+.avatar-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.upload-button {
+    background-color: #f5f5f5 !important;
+    color: #1a237e !important;
+}
+
+.form-grid {
+    margin-bottom: 32px !important;
+}
+
+.settings-divider {
+    margin: 32px 0 !important;
+}
+
+.preferences-section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.preferences-section h6 {
+    color: #1a237e;
+    font-weight: 600;
+}
+
+.settings-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 16px;
+    margin-top: 32px;
+}
+
+/* Switch customization */
+.MuiSwitch-colorPrimary.Mui-checked {
+    color: #1a237e !important;
+}
+
+.MuiSwitch-colorPrimary.Mui-checked + .MuiSwitch-track {
+    background-color: #1a237e !important;
+}
+
+/* TextField customization */
+.MuiTextField-root .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+    border-color: #1a237e !important;
+}
+
+.MuiTextField-root .MuiInputLabel-root.Mui-focused {
+    color: #1a237e !important;
+}
+
+/* Button customization */
+.MuiButton-contained {
+    background-color: #1a237e !important;
+}
+
+.MuiButton-outlined {
+    border-color: #1a237e !important;
+    color: #1a237e !important;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .profile-settings {
+        padding: 20px;
+    }
+
+    .settings-paper {
+        padding: 20px;
+    }
+
+    .settings-header {
+        flex-direction: column;
+        gap: 16px;
+        align-items: flex-start;
+    }
+
+    .profile-avatar {
+        width: 100px !important;
+        height: 100px !important;
+    }
+
+    .settings-actions {
+        flex-direction: column-reverse;
+    }
+
+    .settings-actions button {
+        width: 100%;
+    }
+}
