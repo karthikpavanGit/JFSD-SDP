@@ -1,37 +1,65 @@
 .navbar {
-    background-color: #ffffff !important;
+    background-color: white !important;
     border-bottom: 1px solid #e0e0e0;
 }
 
 .brand-container {
     display: flex;
     align-items: center;
-    flex-grow: 1;
-    gap: 10px;
+    margin-right: 32px;
+}
+
+.brand-container a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
 .logo {
     height: 40px;
-    margin-right: 10px;
-
+    width: auto;
 }
 
 .brand-name {
-    color: #1a237e;
     font-weight: 600 !important;
-    letter-spacing: 1px;
-    
+    color: #1a237e;
+}
+
+.nav-links {
+    display: flex;
+    gap: 24px;
+    margin-right: auto;
 }
 
 .nav-icons {
     display: flex;
-    gap: 16px;
+    gap: 8px;
+    margin-left: auto;
 }
 
-.nav-icons .MuiIconButton-root {
-    color: #1a237e;
+.mobile-menu-button {
+    margin-right: 16px !important;
 }
 
-.nav-icons .MuiIconButton-root:hover {
-    background-color: rgba(26, 35, 126, 0.04);
+.category-menu .MuiPaper-root {
+    min-width: 200px;
+}
+
+.mobile-drawer .MuiDrawer-paper {
+    width: 240px;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    .brand-name {
+        font-size: 1.1rem !important;
+    }
+
+    .logo {
+        height: 32px;
+    }
+
+    .nav-icons {
+        gap: 4px;
+    }
 }

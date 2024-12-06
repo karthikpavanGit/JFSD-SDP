@@ -26,6 +26,7 @@ import ProductSearch from './components/ProductSearch/ProductSearch';
 import Wishlist from './components/Wishlist/Wishlist';
 import Settings from './components/Settings/Settings';
 import OrderTracking from './components/OrderTracking/OrderTracking';
+import CustomerSupport from './components/CustomerSupport/CustomerSupport';
 
 // Cart Component
 import Cart from './components/Cart/Cart';
@@ -103,6 +104,10 @@ function App() {
 
               {/* Checkout Route */}
               <Route path="/checkout" element={<Checkout />} />
+              <Route path="/new-arrivals" element={<NewArrivals />} />
+              <Route path="/best-sellers" element={<BestSellers />} />
+              <Route path="/special-offers" element={ <SpecialOffers />} />
+              <Route path="/support" element={<CustomerSupport />} />
           </Routes>
 
           {/* Cart Drawer */}

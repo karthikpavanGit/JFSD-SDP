@@ -18,6 +18,11 @@ import {
     CircularProgress,
     Chip
 } from '@mui/material';
+import LocalShipping from '@mui/icons-material/LocalShipping';
+import AssignmentReturn from '@mui/icons-material/AssignmentReturn';
+import Inventory from '@mui/icons-material/Inventory';
+import AccountCircle from '@mui/icons-material/AccountCircle';
+
 import {
     QuestionAnswer,
     Email,
@@ -148,7 +153,7 @@ const CustomerSupport = () => {
                             <Button
                                 variant="outlined"
                                 startIcon={<Email />}
-                                href="mailto:support@example.com"
+                                href="nakshatrathreads@kluniversity.in"
                                 fullWidth
                             >
                                 Email Support
@@ -158,7 +163,7 @@ const CustomerSupport = () => {
                             <Button
                                 variant="outlined"
                                 startIcon={<Phone />}
-                                href="tel:+1234567890"
+                                href="tel:+919502725774"
                                 fullWidth
                             >
                                 Call Us
@@ -168,7 +173,7 @@ const CustomerSupport = () => {
                             <Button
                                 variant="outlined"
                                 startIcon={<WhatsApp />}
-                                href="https://wa.me/1234567890"
+                                href="https://wa.me/919502725774"
                                 target="_blank"
                                 fullWidth
                             >
