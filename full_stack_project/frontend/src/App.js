@@ -28,6 +28,12 @@ import Settings from './components/Settings/Settings';
 import OrderTracking from './components/OrderTracking/OrderTracking';
 import CustomerSupport from './components/CustomerSupport/CustomerSupport';
 
+// Admin Routes
+import { AdminProvider } from './context/AdminContext';
+import AdminLogin from './components/Admin/Login/AdminLogin';
+import AdminDashboard from './components/Admin/Dashboard/AdminDashboard';
+import ProtectedRoute from './components/ProtectedRoute';
+
 // Cart Component
 import Cart from './components/Cart/Cart';
 
@@ -68,57 +74,74 @@ function App() {
     const [cartOpen, setCartOpen] = React.useState(false);
 
     return (
-      <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <div className="app">
-          <Navbar onCartClick={() => setCartOpen(true)} />
-          
-          <Routes>
-            
-              {/* Home Page Route */}
-              <Route path="/" element={
-                  <>
-                      <HeroSlider />
-                      <FeaturedCategories />
-                      <NewArrivals />
-                      <SpecialOffers />
-                      <BestSellers />
-                      <CustomerReviews />
-                      <Newsletter />
-                  </>
-              } />
+        <ThemeProvider theme={theme}>
+            <CssBaseline />
+            <Router>
+                <AdminProvider>
+                    <div className="app">
+                        <Navbar onCartClick={() => setCartOpen(true)} />
 
-              {/* Authentication Routes */}
-              <Route path="/login" element={<Login />} />
-              <Route path="/register" element={<Register />} />
+                        <Routes>
+                            {/* Home Page Route */}
+                            <Route
+                                path="/"
+                                element={
+                                    <>
+                                        <HeroSlider />
+                                        <FeaturedCategories />
+                                        <NewArrivals />
+                                        <SpecialOffers />
+                                        <BestSellers />
+                                        <CustomerReviews />
+                                        <Newsletter />
+                                    </>
+                                }
+                            />
 
-              {/* User Routes */}
-              <Route path="/profile" element={<Profile />} />
-              <Route path="/settings" element={<Settings />} />
-              <Route path="/wishlist" element={<Wishlist />} />
-              <Route path="/orders/track/:orderId" element={<OrderTracking />} />
+                            {/* Authentication Routes */}
+                            <Route path="/login" element={<Login />} />
+                            <Route path="/register" element={<Register />} />
 
-              {/* Product Routes */}
-              <Route path="/products" element={<ProductSearch />} />
-              <Route path="/product/:id" element={<ProductDetail />} />
+                            {/* User Routes */}
+                            <Route path="/profile" element={<Profile />} />
+                            <Route path="/settings" element={<Settings />} />
+                            <Route path="/wishlist" element={<Wishlist />} />
+                            <Route
+                                path="/orders/track/:orderId"
+                                element={<OrderTracking />}
+                            />
 
-              {/* Checkout Route */}
-              <Route path="/checkout" element={<Checkout />} />
-              <Route path="/new-arrivals" element={<NewArrivals />} />
-              <Route path="/best-sellers" element={<BestSellers />} />
-              <Route path="/special-offers" element={ <SpecialOffers />} />
-              <Route path="/support" element={<CustomerSupport />} />
-          </Routes>
+                            {/* Product Routes */}
+                            <Route path="/products" element={<ProductSearch />} />
+                            <Route path="/product/:id" element={<ProductDetail />} />
 
-          {/* Cart Drawer */}
-          <Cart 
-              open={cartOpen} 
-              onClose={() => setCartOpen(false)} 
-          />
+                            {/* Checkout Route */}
+                            <Route path="/checkout" element={<Checkout />} />
+                            <Route path="/new-arrivals" element={<NewArrivals />} />
+                            <Route path="/best-sellers" element={<BestSellers />} />
+                            <Route path="/special-offers" element={<SpecialOffers />} />
+                            <Route path="/support" element={<CustomerSupport />} />
 
-          <Footer />
-      </div>
-  </ThemeProvider>
+                            {/* Admin Routes */}
+                            <Route path="/admin/login" element={<AdminLogin />} />
+                            <Route
+                                path="/admin/*"
+                                element={
+                                    <ProtectedRoute>
+                                        <AdminDashboard />
+                                    </ProtectedRoute>
+                                }
+                            />
+                        </Routes>
+
+                        {/* Cart Drawer */}
+                        <Cart open={cartOpen} onClose={() => setCartOpen(false)} />
+
+                        <Footer />
+                    </div>
+                </AdminProvider>
+            </Router>
+        </ThemeProvider>
     );
 }
 
