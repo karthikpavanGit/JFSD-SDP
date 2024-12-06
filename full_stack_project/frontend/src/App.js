@@ -5,6 +5,9 @@ import Navbar from './components/NavBar/Navbar';
 import HeroSlider from './components/HeroSlider/HeroSlider';
 import FeaturedCategories from './components/FeaturedCategories/FeaturedCategories';
 import NewArrivals from './components/NewArrivals/NewArrivals';
+import BestSellers from './components/BestSellers/BestSellers';
+import Newsletter from './components/NewsLetter/NewsLetter';
+import Footer from './components/Footer/Footer';
 import './App.css';
 
 const theme = createTheme({
@@ -31,6 +34,9 @@ function App() {
                 {/* Add more components here */}
                 <FeaturedCategories />
                 <NewArrivals />
+                <BestSellers />
+                <Newsletter />
+                <Footer />
             </div>
         </ThemeProvider>
     );

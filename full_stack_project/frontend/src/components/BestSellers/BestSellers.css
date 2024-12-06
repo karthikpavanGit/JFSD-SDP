@@ -1,0 +1,52 @@
+.best-sellers {
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+
+.bestseller-card {
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bestseller-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.bestseller-image {
+    height: 400px;
+    object-fit: cover;
+}
+
+.bestseller-content {
+    padding: 24px !important;
+}
+
+.bestseller-name {
+    margin-bottom: 8px !important;
+    font-weight: 500 !important;
+}
+
+.bestseller-price {
+    color: #c2185b;
+    font-weight: 600 !important;
+    margin-bottom: 16px !important;
+}
+
+.bestseller-rating {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.bestseller-button {
+    background-color: #1a237e !important;
+    color: white !important;
+    padding: 12px !important;
+}
+
+.bestseller-button:hover {
+    background-color: #0d1757 !important;
+}
