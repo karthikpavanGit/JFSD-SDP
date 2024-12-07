@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { 
     AppBar, 
     Toolbar, 
@@ -15,7 +15,8 @@ import {
     List,
     ListItem,
     ListItemIcon,
-    ListItemText
+    ListItemText,
+    Avatar
 } from '@mui/material';
 import { 
     ShoppingCart, 
@@ -37,7 +38,18 @@ const Navbar = () => {
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('md'));
     const navigate = useNavigate();
-    
+    const [isAuthenticated, setIsAuthenticated] = useState(false);
+    const [userData, setUserData] = useState(null);
+    const [anchorEl, setAnchorEl] = useState(null);
+
+    useEffect(() => {
+        const token = localStorage.getItem('userToken');
+        const user = JSON.parse(localStorage.getItem('userData'));
+        console.log('Current user data:', user);
+        setIsAuthenticated(!!token);
+        setUserData(user);
+    }, []);
+
     // States for menus
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const [categoryMenuAnchor, setCategoryMenuAnchor] = useState(null);
@@ -57,12 +69,86 @@ const Navbar = () => {
         setCategoryMenuAnchor(null);
     };
 
+    const handleProfileMenuOpen = (event) => {
+        setAnchorEl(event.currentTarget);
+    };
+
+    const handleLogout = () => {
+        localStorage.removeItem('userToken');
+        localStorage.removeItem('userData');
+        setIsAuthenticated(false);
+        setUserData(null);
+        handleMenuClose();
+        navigate('/login');
+    };
+
     // Navigation items for mobile drawer
     const navigationItems = [
         { label: 'Home', icon: <Home />, path: '/' },
         { label: 'Categories', icon: <Category />, action: handleCategoryMenuOpen },
         { label: 'Support', icon: <Support />, path: '/support' },
     ];
+
+    const renderAuthSection = () => {
+        if (isAuthenticated && userData) {
+            console.log('User role:', userData.role);
+            return (
+                <>
+                    <IconButton onClick={handleProfileMenuOpen}>
+                        <Avatar sx={{ width: 32, height: 32 }}>
+                            {userData.firstName?.charAt(0)}
+                        </Avatar>
+                    </IconButton>
+                    <Menu
+                        anchorEl={anchorEl}
+                        open={Boolean(anchorEl)}
+                        onClose={handleMenuClose}
+                    >
+                        <MenuItem 
+                            component={Link} 
+                            to="/profile"
+                            onClick={handleMenuClose}
+                        >
+                            Profile
+                        </MenuItem>
+                        {userData.role === 'admin' && (
+                            <MenuItem 
+                                component={Link} 
+                                to="/admin/users"
+                                onClick={handleMenuClose}
+                            >
+                                Manage Users
+                            </MenuItem>
+                        )}
+                        <MenuItem onClick={handleLogout}>
+                            Logout
+                        </MenuItem>
+                    </Menu>
+                </>
+            );
+        }
+
+        return (
+            <Box sx={{ display: 'flex', gap: 1 }}>
+                <Button 
+                    color="inherit" 
+                    component={Link} 
+                    to="/login"
+                    variant="outlined"
+                >
+                    Login
+                </Button>
+                <Button 
+                    color="primary" 
+                    component={Link} 
+                    to="/register"
+                    variant="contained"
+                >
+                    Register
+                </Button>
+            </Box>
+        );
+    };
 
     return (
         <>
@@ -111,21 +197,31 @@ const Navbar = () => {
                         </Box>
                     )}
 
-                    {/* Right Side Icons */}
+                    {/* Modified Right Side Icons */}
                     <Box className="nav-icons">
-                        <IconButton aria-label="account" component={Link} to="/profile">
-                            <Person />
-                        </IconButton>
-                        <IconButton aria-label="wishlist" component={Link} to="/wishlist">
-                            <Badge badgeContent={2} color="secondary">
-                                <Favorite />
-                            </Badge>
-                        </IconButton>
-                        <IconButton aria-label="cart" component={Link} to="/cart">
-                            <Badge badgeContent={4} color="secondary">
-                                <ShoppingCart />
-                            </Badge>
-                        </IconButton>
+                        {renderAuthSection()}
+                        {isAuthenticated && (
+                            <>
+                                <IconButton 
+                                    component={Link} 
+                                    to="/wishlist"
+                                    color="inherit"
+                                >
+                                    <Badge badgeContent={0} color="secondary">
+                                        <Favorite />
+                                    </Badge>
+                                </IconButton>
+                                <IconButton 
+                                    component={Link} 
+                                    to="/cart"
+                                    color="inherit"
+                                >
+                                    <Badge badgeContent={0} color="secondary">
+                                        <ShoppingCart />
+                                    </Badge>
+                                </IconButton>
+                            </>
+                        )}
                     </Box>
                 </Toolbar>
             </AppBar>

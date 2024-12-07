@@ -9,6 +9,10 @@ import {
     IconButton 
 } from '@mui/material';
 import { FavoriteBorder, ShoppingCart } from '@mui/icons-material';
+import banarasi from '/home/pavan_karthik/SDP_project/JFSD-SDP/full_stack_project/frontend/src/Assets/Banarasi.png'
+import Designer from '/home/pavan_karthik/SDP_project/JFSD-SDP/full_stack_project/frontend/src/Assets/DesignerBlouse.jpg'
+import HandOwen from '/home/pavan_karthik/SDP_project/JFSD-SDP/full_stack_project/frontend/src/Assets/Handowen.png'
+import SilkDupatta from '/home/pavan_karthik/SDP_project/JFSD-SDP/full_stack_project/frontend/src/Assets/SilkDupatta.jpg'
 import './NewArrivals.css';
 
 const products = [
@@ -16,28 +20,28 @@ const products = [
         id: 1,
         name: 'Banarasi Silk Saree',
         price: '₹12,999',
-        image: '/images/products/saree1.jpg',
+        image: banarasi,
         tag: 'New'
     },
     {
         id: 2,
         name: 'Handwoven Cotton Fabric',
         price: '₹1,499',
-        image: '/images/products/fabric1.jpg',
+        image: HandOwen,
         tag: 'New'
     },
     {
         id: 3,
         name: 'Designer Blouse',
         price: '₹2,999',
-        image: '/images/products/blouse1.jpg',
+        image: Designer,
         tag: 'New'
     },
     {
         id: 4,
         name: 'Silk Dupatta',
         price: '₹3,999',
-        image: '/images/products/dupatta1.jpg',
+        image: SilkDupatta,
         tag: 'New'
     }
 ];

@@ -2,109 +2,163 @@ import React, { useState } from 'react';
 import {
     Container,
     Paper,
-    Typography,
     TextField,
     Button,
-    Link,
-    InputAdornment,
-    IconButton
+    Typography,
+    Alert,
+    Box,
+    CircularProgress,
+    IconButton,
+    InputAdornment
 } from '@mui/material';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { Visibility, VisibilityOff } from '@mui/icons-material';
-import { useNavigate } from 'react-router-dom';
-import './Login.css';
 
 const Login = () => {
     const navigate = useNavigate();
+    const location = useLocation();
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState('');
     const [showPassword, setShowPassword] = useState(false);
     const [formData, setFormData] = useState({
         email: '',
         password: ''
     });
 
-    const handleSubmit = (e) => {
+    const handleChange = (e) => {
+        setFormData({
+            ...formData,
+            [e.target.name]: e.target.value
+        });
+        setError('');
+    };
+
+    const handleClickShowPassword = () => {
+        setShowPassword(!showPassword);
+    };
+
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        // Add login logic here
-        console.log('Login:', formData);
+        setLoading(true);
+        setError('');
+
+        try {
+            const response = await fetch('http://localhost:5000/api/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData)
+            });
+
+            const data = await response.json();
+
+            if (!response.ok) {
+                throw new Error(data.message);
+            }
+
+            // Store token and user data
+            localStorage.setItem('userToken', data.token);
+            localStorage.setItem('userData', JSON.stringify(data.user));
+            console.log('Stored user data:', data.user); // Debug log
+
+            navigate('/');
+            window.location.reload(); // Refresh to update navbar
+
+        } catch (err) {
+            setError(err.message);
+        } finally {
+            setLoading(false);
+        }
     };
 
     return (
-        <div className="login-page">
-            <Container maxWidth="xs">
-                <Paper elevation={3} className="login-paper">
-                    <Typography variant="h4" align="center" gutterBottom>
-                        Welcome Back
-                    </Typography>
-                    <Typography variant="body2" align="center" color="textSecondary" gutterBottom>
-                        Please login to your account
-                    </Typography>
+        <Container maxWidth="sm" sx={{ mt: 8, mb: 4 }}>
+            <Paper elevation={3} sx={{ p: 4 }}>
+                <Typography variant="h4" align="center" gutterBottom>
+                    Login
+                </Typography>
 
-                    <form onSubmit={handleSubmit} className="login-form">
-                        <TextField
-                            fullWidth
-                            label="Email Address"
-                            variant="outlined"
-                            type="email"
-                            value={formData.email}
-                            onChange={(e) => setFormData({
-                                ...formData,
-                                email: e.target.value
-                            })}
-                            required
-                        />
+                {error && (
+                    <Alert severity="error" sx={{ mb: 2 }}>
+                        {error}
+                    </Alert>
+                )}
 
-                        <TextField
-                            fullWidth
-                            label="Password"
-                            variant="outlined"
-                            type={showPassword ? 'text' : 'password'}
-                            value={formData.password}
-                            onChange={(e) => setFormData({
-                                ...formData,
-                                password: e.target.value
-                            })}
-                            InputProps={{
-                                endAdornment: (
-                                    <InputAdornment position="end">
-                                        <IconButton
-                                            onClick={() => setShowPassword(!showPassword)}
-                                            edge="end"
-                                        >
-                                            {showPassword ? <VisibilityOff /> : <Visibility />}
-                                        </IconButton>
-                                    </InputAdornment>
-                                )
-                            }}
-                            required
-                        />
+                {location.state?.message && (
+                    <Alert severity="success" sx={{ mb: 2 }}>
+                        {location.state.message}
+                    </Alert>
+                )}
 
-                        <Link
-                            href="/forgot-password"
-                            className="forgot-password"
-                            underline="hover"
-                        >
-                            Forgot Password?
+                <form onSubmit={handleSubmit}>
+                    <TextField
+                        fullWidth
+                        label="Email"
+                        name="email"
+                        type="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        margin="normal"
+                        required
+                        autoComplete="email"
+                    />
+                    
+                    <TextField
+                        fullWidth
+                        label="Password"
+                        name="password"
+                        type={showPassword ? 'text' : 'password'}
+                        value={formData.password}
+                        onChange={handleChange}
+                        margin="normal"
+                        required
+                        autoComplete="current-password"
+                        InputProps={{
+                            endAdornment: (
+                                <InputAdornment position="end">
+                                    <IconButton
+                                        aria-label="toggle password visibility"
+                                        onClick={handleClickShowPassword}
+                                        edge="end"
+                                    >
+                                        {showPassword ? <VisibilityOff /> : <Visibility />}
+                                    </IconButton>
+                                </InputAdornment>
+                            ),
+                        }}
+                    />
+
+                    <Box sx={{ mt: 2, mb: 2 }}>
+                        <Link to="/forgot-password" style={{ textDecoration: 'none' }}>
+                            <Typography color="primary" variant="body2">
+                                Forgot Password?
+                            </Typography>
                         </Link>
+                    </Box>
 
-                        <Button
-                            type="submit"
-                            variant="contained"
-                            fullWidth
-                            size="large"
-                            className="login-button"
-                        >
-                            Login
-                        </Button>
+                    <Button
+                        type="submit"
+                        fullWidth
+                        variant="contained"
+                        color="primary"
+                        disabled={loading}
+                        sx={{ mt: 2, mb: 2 }}
+                    >
+                        {loading ? <CircularProgress size={24} /> : 'Login'}
+                    </Button>
+                </form>
 
-                        <Typography variant="body2" align="center" className="signup-prompt">
-                            Don't have an account?{' '}
-                            <Link href="/register" underline="hover">
-                                Sign up
-                            </Link>
+                <Typography align="center" variant="body2">
+                    Don't have an account?{' '}
+                    <Link to="/register" style={{ textDecoration: 'none' }}>
+                        <Typography component="span" color="primary">
+                            Register
                         </Typography>
-                    </form>
-                </Paper>
-            </Container>
-        </div>
+                    </Link>
+                </Typography>
+            </Paper>
+        </Container>
     );
 };
 

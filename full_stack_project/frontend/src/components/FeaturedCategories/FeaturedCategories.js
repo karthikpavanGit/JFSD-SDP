@@ -1,30 +1,33 @@
 import React from 'react';
 import { Container, Grid, Paper, Typography } from '@mui/material';
 import './FeaturedCategories.css';
-
+import Saree from '/home/pavan_karthik/SDP_project/JFSD-SDP/full_stack_project/frontend/src/Assets/Sarees.png'
+import Modern from '/home/pavan_karthik/SDP_project/JFSD-SDP/full_stack_project/frontend/src/Assets/ModernFusion.png'
+import TradWear from '/home/pavan_karthik/SDP_project/JFSD-SDP/full_stack_project/frontend/src/Assets/TraditionalWear.jpg'
+import Fabrics from '/home/pavan_karthik/SDP_project/JFSD-SDP/full_stack_project/frontend/src/Assets/Fabrics.jpg'
 const categories = [
     {
         id: 1,
         title: 'Sarees',
-        image: '/images/categories/sarees.jpg',
+        image: Saree,
         count: '250+ Products'
     },
     {
         id: 2,
         title: 'Fabrics',
-        image: '/images/categories/fabrics.jpg',
+        image: Fabrics,
         count: '180+ Products'
     },
     {
         id: 3,
         title: 'Traditional Wear',
-        image: '/images/categories/traditional.jpg',
+        image: TradWear,
         count: '120+ Products'
     },
     {
         id: 4,
         title: 'Modern Fusion',
-        image: '/images/categories/fusion.jpg',
+        image: Modern,
         count: '90+ Products'
     }
 ];
