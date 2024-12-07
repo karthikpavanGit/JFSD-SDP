@@ -33,18 +33,115 @@ const Register = () => {
         phone: '',
         gender: '',
         dateOfBirth: '',
+        
         street: '',
         city: '',
+        country: '', 
         state: '',
         pincode: ''
     });
-
+    const [states, setStates] = useState([]);
     const steps = ['Personal Information', 'Contact Details', 'Account Setup'];
+    // ... existing imports ...
+    const countries = {
+        India: [
+            'Andhra Pradesh',
+            'Arunachal Pradesh',
+            'Assam',
+            'Bihar',
+            'Chhattisgarh',
+            'Goa',
+            'Gujarat',
+            'Haryana',
+            'Himachal Pradesh',
+            'Jharkhand',
+            'Karnataka',
+            'Kerala',
+            'Madhya Pradesh',
+            'Maharashtra',
+            'Manipur',
+            'Meghalaya',
+            'Mizoram',
+            'Nagaland',
+            'Odisha',
+            'Punjab',
+            'Rajasthan',
+            'Sikkim',
+            'Tamil Nadu',
+            'Telangana',
+            'Tripura',
+            'Uttar Pradesh',
+            'Uttarakhand',
+            'West Bengal',
+            'Andaman and Nicobar Islands',
+            'Chandigarh',
+            'Dadra and Nagar Haveli and Daman and Diu',
+            'Delhi',
+            'Jammu and Kashmir',
+            'Ladakh',
+            'Lakshadweep',
+            'Puducherry'
+        ],
+        USA: [
+            'Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California',
+            'Colorado', 'Connecticut', 'Delaware', 'Florida', 'Georgia',
+            'Hawaii', 'Idaho', 'Illinois', 'Indiana', 'Iowa',
+            'Kansas', 'Kentucky', 'Louisiana', 'Maine', 'Maryland',
+            'Massachusetts', 'Michigan', 'Minnesota', 'Mississippi', 'Missouri',
+            'Montana', 'Nebraska', 'Nevada', 'New Hampshire', 'New Jersey',
+            'New Mexico', 'New York', 'North Carolina', 'North Dakota', 'Ohio',
+            'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode Island', 'South Carolina',
+            'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont',
+            'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming',
+            'District of Columbia', 'Puerto Rico', 'Guam', 'American Samoa', 'U.S. Virgin Islands'
+        ],
+        Canada: [
+            'Alberta',
+            'British Columbia',
+            'Manitoba',
+            'New Brunswick',
+            'Newfoundland and Labrador',
+            'Northwest Territories',
+            'Nova Scotia',
+            'Nunavut',
+            'Ontario',
+            'Prince Edward Island',
+            'Quebec',
+            'Saskatchewan',
+            'Yukon'
+        ],
+        Australia: [
+            'New South Wales',
+            'Victoria',
+            'Queensland',
+            'Western Australia',
+            'South Australia',
+            'Tasmania',
+            'Australian Capital Territory',
+            'Northern Territory',
+            'External Territories'
+        ],
+        'United Kingdom': [
+            'England',
+            'Scotland',
+            'Wales',
+            'Northern Ireland'
+        ]
+    };
 
+    // ... rest of the component remains the same ...
     const handleChange = (e) => {
-        setFormData({
-            ...formData,
-            [e.target.name]: e.target.value
+        const { name, value } = e.target;
+        setFormData(prev => {
+            const newData = {
+                ...prev,
+                [name]: value
+            };
+            // Reset state when country changes
+            if (name === 'country') {
+                newData.state = '';
+            }
+            return newData;
         });
         setError('');
     };
@@ -56,7 +153,23 @@ const Register = () => {
                     setError('Please fill in all fields');
                     return false;
                 }
-                return true;
+                // Validate first and last names (only alphabets)
+            if (!/^[A-Za-z]+$/.test(formData.firstName)) {
+                setError('First name must contain only alphabets');
+                return false;
+            }
+            if (!/^[A-Za-z]+$/.test(formData.lastName)) {
+                setError('Last name must contain only alphabets');
+                return false;
+            }     
+                const yearOfBirth = new Date(formData.dateOfBirth).getFullYear();
+            if (yearOfBirth < 1850 || yearOfBirth > 2024) {
+                setError('Date of birth must be between 1850 and 2024');
+                return false;
+            }
+
+            setError(''); // Clear error if all validations pass
+            return true;
 
             case 1: // Contact Details
                 if (!formData.phone || !formData.street || !formData.city || !formData.state || !formData.pincode) {
@@ -73,7 +186,7 @@ const Register = () => {
                 }
                 return true;
 
-            case 2: // Account Setup
+                case 2: // Account Setup
                 if (!formData.email || !formData.password || !formData.confirmPassword) {
                     setError('Please fill in all fields');
                     return false;
@@ -82,16 +195,17 @@ const Register = () => {
                     setError('Please enter a valid email address');
                     return false;
                 }
-                if (formData.password.length < 6) {
-                    setError('Password must be at least 6 characters long');
+                // Enhanced password validation
+                if (!/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/.test(formData.password)) {
+                    setError('Password must be at least 8 characters long and include at least one uppercase letter, one lowercase letter, one number, and one special character (@, $, etc.)');
                     return false;
                 }
                 if (formData.password !== formData.confirmPassword) {
                     setError('Passwords do not match');
                     return false;
                 }
+                setError(''); // Clear error if all validations pass
                 return true;
-
             default:
                 return false;
         }
@@ -224,15 +338,38 @@ const Register = () => {
                             margin="normal"
                             required
                         />
-                        <TextField
-                            fullWidth
-                            label="State"
-                            name="state"
-                            value={formData.state}
-                            onChange={handleChange}
-                            margin="normal"
-                            required
-                        />
+
+<FormControl fullWidth margin="normal" required>
+                    <InputLabel>Country</InputLabel>
+                    <Select
+                        name="country"
+                        value={formData.country}
+                        onChange={handleChange}
+                        label="Country"
+                    >
+                        {Object.keys(countries).map((country) => (
+                            <MenuItem key={country} value={country}>
+                                {country}
+                            </MenuItem>
+                        ))}
+                    </Select>
+                </FormControl>
+                <FormControl fullWidth margin="normal" required>
+                    <InputLabel>State</InputLabel>
+                    <Select
+                        name="state"
+                        value={formData.state}
+                        onChange={handleChange}
+                        label="State"
+                        disabled={!formData.country}
+                    >
+                        {formData.country && countries[formData.country].map((state) => (
+                            <MenuItem key={state} value={state}>
+                                {state}
+                            </MenuItem>
+                        ))}
+                    </Select>
+                </FormControl>
                         <TextField
                             fullWidth
                             label="Pincode"
